@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Login & Register</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <div class="book">
+    <div class="left-page">
+      <h1>Welcome to the My Site</h1>
+
+      <div id="tabs">
+        <div class="tab" id="privacyPolicyLink" onclick="showPrivacyPolicy()">Privacy Policy</div>
+        <div class="tab" id="passwordRulesLink" onclick="showPasswordRules()">Password Rules</div>
+      </div>
+
+      <div id="privacyPolicyInfo" class="content hidden">
+        <h2>Privacy Policy</h2>
+        <p>We are committed to respecting your privacy and protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information.</p>
+        <p class="strong"><strong>Information We Collect</strong></p>
+        <p>We may collect the following types of personal information:</p>
+        <ul>
+          <li>Name</li>
+          <li>Email address</li>
+          <li>Phone number</li>
+          <li>Address</li>
+          <li>Payment information</li>
+        </ul>
+        <p class="strong"><strong>How We Use Your Information</strong></p>
+        <p>We use your personal information for various purposes, including:</p>
+        <ul>
+          <li>Providing services to you</li>
+          <li>Communicating with you</li>
+          <li>Improving our website and services</li>
+          <li>Processing payments</li>
+        </ul>
+        <p class="strong"><strong>Disclosure of Your Information</strong></p>
+        <p>We may share your personal information with third parties under certain circumstances, such as when required by law or to provide our services.</p>
+        <p class="strong"><strong>Security</strong></p>
+        <p>We take reasonable measures to protect your personal information from unauthorized access or disclosure.</p>
+        <p class="strong"><strong>Contact Us</strong></p>
+        <p>If you have any questions or concerns about this Privacy Policy, please contact us at privacy@example.com.</p>
+      </div>
+
+      <!-- Password Rules content -->
+      <div id="passwordRulesInfo" class="content hidden">
+        <h2>Password Rules</h2>
+        <ul>
+          <li>Minimum 8 characters</li>
+          <li>At least one uppercase letter</li>
+          <li>At least one lowercase letter</li>
+          <li>At least one digit</li>
+          <li>At least one special characters (#,$,&,@,*,^,%,!)</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!---------------------------------------->
+    <div class="right-page">
+      <div id="tabs">
+        <div class="tab" id="loginTab" onclick="showLoginForm()">Login</div>
+        <div class="tab" id="registerTab" onclick="showRegisterForm()">Register</div>
+      </div>
+      <div class="forms-container">
+        <div class="forms" id="loginForm">
+          <h2 class="title">Sign in</h2>
+          <div class="input-field">
+            <i class="fa fa-user"></i>
+            <input id="loginUsername" type="text" placeholder="Username" required />
+          </div>
+          <div class="input-field">
+            <i class="fa fa-lock"></i>
+            <input id="loginPassword" type="password" placeholder="Password" required />
+          </div>
+          <button onclick="login(event)">Login</button>
+          <h5> <a onclick="showForgotForm(event)">Forgot Password</a></h5>
+
+        </div>
+        <div class="forms" id="registerForm">
+          <h2 class="title">Register</h2>
+          <div class="input-field">
+            <input id="registerUsername" type="text" placeholder="Username" required />
+            <i class="fa fa-user"></i>
+          </div>
+          <div class="input-field">
+            <input id="registerEmail" type="email" placeholder="Email" required />
+            <i class="fa fa-envelope"></i>
+          </div>
+          <div class="input-field">
+            <input id="registerPassword" type="password" placeholder="Password" required />
+            <i class="fa fa-lock"></i>
+          </div>
+          <button onclick="register()">Register</button>
+        </div>
+        <div class="forms" id="forgotForm">
+          <h2 class="title">Forgot Password</h2>
+          <div class="input-field">
+            <input id="forgotEmail" type="email" placeholder="Email" required />
+            <i class="fa fa-envelope"></i>
+          </div>
+          <button onclick="forgotPassword()">Submit</button>
+        </div>
+      </div>
+      <div id="messageScreen" class="hidden">
+        <p id="welcomeMessage"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
