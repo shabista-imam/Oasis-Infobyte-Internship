@@ -43,8 +43,16 @@ Visit : https://codepen.io/shabista-imam-webDeveloper/pen/dywOGQY?editors=1100
 
 ###  Tribute Page
 
-You can add text within a collapsed section. 
+The description of the task is given below.
 
+![image](https://github.com/shabista-imam/Oasis-Infobyte-Internship/assets/64741363/530bca5b-90f4-4e43-b97f-79c4d9d4b98c)
+
+
+### My Result :
+Visit : https://codepen.io/shabista-imam-webDeveloper/pen/NWeRYob?editors=1100
+
+![image](https://github.com/shabista-imam/Oasis-Infobyte-Internship/assets/64741363/beb9d4cf-2db6-4548-973a-fb51766c9193)
+![image](https://github.com/shabista-imam/Oasis-Infobyte-Internship/assets/64741363/32f6051a-1add-421a-98e6-848c57c5a5d2)
 
 
 </details>
@@ -55,9 +63,14 @@ You can add text within a collapsed section.
 
 ### To-do Web App
 
-You can add text within a collapsed section. 
+The description of the task is given below.
+![image](https://github.com/shabista-imam/Oasis-Infobyte-Internship/assets/64741363/e81c5a98-8007-41f3-aa2f-a3c3cc260999)
 
-You can add an image or a code block, too.
+
+### My Result :
+Visit : https://codepen.io/shabista-imam-webDeveloper/pen/BavQjjz?editors=1100
+
+![image](https://github.com/shabista-imam/Oasis-Infobyte-Internship/assets/64741363/6634020a-8011-4816-a6fc-74503fc21757)
 
 </details>
 
@@ -67,9 +80,13 @@ You can add an image or a code block, too.
 
 ### Login Authentication Using Js
 
-You can add text within a collapsed section. 
+The description of the task is given below.
+![image](https://github.com/shabista-imam/Oasis-Infobyte-Internship/assets/64741363/92ff1606-d56d-4920-a15d-51f40e737abc)
 
-You can add an image or a code block, too.
 
+### My Result :
+Visit : https://codepen.io/shabista-imam-webDeveloper/pen/GRPrXjV?editors=1100
+
+![image](https://github.com/shabista-imam/Oasis-Infobyte-Internship/assets/64741363/8b4a4435-8430-4eb7-8de8-2f5633f54065)
 
 </details>
