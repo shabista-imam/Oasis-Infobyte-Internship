@@ -1,0 +1,309 @@
+* {
+	margin:0;
+	padding:0;
+}
+html, body {
+    font-size: 1.1rem;
+    font-family: 'Quicksand', sans-serif;
+    height: 100%;
+    padding-bottom: 20%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg3Dz6KSQ2SYwQm_qrJJbxSSUFxf_0m8uflIxY9M0MIfFfwnKkfW9XLqXkgaFORI2P_oQ&usqp=CAU");
+    color: #FFF;
+    background-repeat: no-repeat;
+    background-size: cover; /* Use 'cover' to scale and fit the image */
+    background-attachment: fixed; /* Keep the background fixed */
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    padding-top:40px;
+}
+
+.left-column {
+    width: 40%;
+  position:relative;
+    background-color: #f7f7f7; /* Set a background color for the left column */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+nav{
+  margin-left:0;
+}
+nav h1 {
+    background:#fff;
+    color:#000;
+    font-weight:normal;
+    font-size:18px;
+    letter-spacing:0.05em;
+    padding:10px;
+}
+
+/* Style the form elements within the left column */
+.left-column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-column label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.left-column input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.left-column textarea {
+    padding: 10px;
+    padding-top:10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Allow vertical resizing of the textarea */
+    min-height: 300px; /* Set a minimum height for the textarea */
+}
+
+.left-column button[type="submit"] {
+    background-color: #51bd55;
+    color: #fff;
+    padding: 10px 20px;
+    font-size:18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.left-column button[type="submit"]:active{
+  color:#000;
+}
+.left-column button[type="submit"]:active:after{
+  background:transparent;
+}
+.left-column button[type="submit"]:hover:before{
+  opacity:1;
+}
+
+
+
+/* ... (previous CSS styles) ... */
+
+.right-column {
+    width: 58%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007BFF;
+}
+
+.section-header h4 {
+    font-weight: bold;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.description {
+    color: #555;
+    margin-top: 5px;
+}
+
+.actions {
+    margin-top: 10px;
+}
+
+.btn-picto {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007BFF;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.btn-picto:hover {
+    color: #0056b3;
+}
+
+.done {
+    text-decoration: line-through;
+    color: #555;
+}
+
+
+#todolist {
+	padding:1rem 2rem 2rem;
+	max-width:100%;
+  height:100%;
+	
+}
+
+#todolist .emptylist {
+	margin-top:2.6rem;
+	text-align:center;
+	letter-spacing:.05em;
+	font-style:italic;
+	opacity:0.8;
+	
+}
+#todolist ul {
+	margin-top:3.8rem;
+	list-style:none;
+}
+#todolist .todolist-move {
+	transition: transform 1s;
+}
+#todolist li {
+	display:flex;
+	margin:0 -0.4rem 10px;
+	padding:1.1rem 4rem;
+	justify-content:space-between;
+	align-items:center;
+  background:#fff;
+  color:#000;
+}
+
+#todolist .actions {
+	flex-shrink:0;
+	padding-left:0.7em;
+}
+#todolist .label {
+	position:relative;
+	transition:opacity .2s linear;
+}
+#todolist .done .label {
+	opacity:.6;
+}
+#todolist .done .label:before {
+	content:'';
+	position:absolute;
+	top:50%;
+	left:-.5rem;
+	display:block;
+	width:0%;
+	height:1px;
+	background:#000;
+	animation:strikeitem .3s ease-out 0s forwards;
+}
+#todolist .btn-picto {
+	border:none;
+	background:none;
+	-webkit-appearance:none;
+	cursor:pointer;
+	color:#000;
+}
+
+
+/* TOOGLE COMPONENT */
+.togglebutton-wrapper {
+	margin-top:1em;
+}
+.togglebutton-wrapper label {
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+.togglebutton-wrapper input {
+	position:absolute;
+    left:-9999px;
+}
+.togglebutton-wrapper .togglebutton-label {
+	font-size:.8rem;
+	letter-spacing:.1em
+}
+.togglebutton-wrapper .tooglebutton-box {
+	position:relative;
+	display:block;
+	margin-left:0.6em;
+	width:38px;
+	height:22px;
+	background:white;
+	/*border:1px solid black;*/
+	border-radius:999px;
+	cursor:pointer;
+}
+.togglebutton-wrapper .tooglebutton-box:before {
+	content:'';
+	position:absolute;
+	top:2px; left:2px;
+	display:block;
+	width:18px; height:18px;
+	/*border:1px solid #FF6666;*/
+	border-radius:50%;
+	background:#000;
+	opacity:0.7;
+	transition:	all .2s ease-in-out;
+}
+.togglebutton-wrapper.togglebutton-focus .tooglebutton-box {
+	box-shadow:0px 0px 0px 3px rgba(0,0,0,0.1);
+}
+.togglebutton-wrapper.togglebutton-checked .tooglebutton-box:before {
+	left:calc(100% - 4px - 16px);
+	opacity:1;
+}
+
+.description {
+    font-size: 1rem;
+    margin-top: 0.2rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* ... (previous CSS styles) ... */
+
+.bottom-table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow-x: auto; /* Add horizontal scroll for small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #62c465;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #62c465;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #8aa88b;
+}
+
+table tr:hover {
+    background-color: #754605;
+}
+#save-button{
+  background-color: #51bd55;
+    color: #fff;
+    padding: 10px 20px;
+    font-size:18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
