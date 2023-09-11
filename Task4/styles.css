@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+#loginForm{
+  display:block;
+}
+#registerForm {
+  display: none;
+}
+/* Style for the tabs container */
+.right-page #tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333; /* Background color for the tabs */
+  border-radius: 15px; /* Increase the border-radius for rounded tabs */
+  margin-top: 30px; /* Increase the top margin as needed */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle effect */
+}
+
+.right-page .tab {
+  padding: 10px 60px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Shape effect for the tabs */
+.right-page .tab:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.right-page .tab:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Hover effect */
+.right-page .tab:hover {
+  background-color: #555; /* Background color on hover */
+  transform: translateY(-2px); /* Slight upward translation on hover */
+}
+.right-page .tab.active {
+  background-color: #999; /* Change background color when active */
+}
+
+.forms-container {
+  width: 100%;
+  max-width: 500px; /* Increase the max-width as needed */
+  text-align: center; /* Center align the content */
+}
+
+.forms {
+  width: 100%;
+  padding: 25px;
+  margin: 20px 0; /* Add spacing between forms */
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  border-radius:10px;
+}
+
+/* Style for the "Forgot Password" form */
+#forgotForm {
+  display: none;
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius:10px;
+}
+.forms input{
+  
+}
+.forms input[type="text"],
+.forms input[type="email"],
+.forms input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 3px 0;
+  border: 2px solid #ccc;
+  font-size: 18px;
+  transition: border-color 0.3s;
+  padding-left: 35px;
+}
+
+.forms input[type="text"]:focus,
+.forms input[type="email"]:focus,
+.forms input[type="password"]:focus {
+  border-color: #333;
+}
+
+.forms button {
+  width: 70%;
+  height: 50px;
+  font-size:20px;
+  font-weight:900;
+  border-radius:25px;
+  line-height: 2px;
+  color: #fff;
+  padding: 0;
+  border: none;
+  background: rgb(255,27,0);
+background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 10%);
+}
+
+.forms button:hover {
+  color: #fff;
+  font-weight:700;
+  background:grey;
+   box-shadow:none;
+}
+.forms button:before,
+.forms button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #f0094a;
+  box-shadow:
+   -1px -1px 5px 0px #fff,
+   7px 7px 20px 0px #0003,
+   4px 4px 5px 0px #0002;
+  transition:400ms ease all;
+}
+.forms button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.forms button:hover:before,
+.forms button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+/* Style for the "Forgot Password" form */
+#forgotForm {
+  width: 100%;
+  padding: 25px;
+  margin: 20px 0; /* Add spacing between forms */
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: border-color 0.3s;
+}
+/* Style for the "Forgot Password" button */
+.forms h5 {
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #111;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.forms h5:hover {
+  color: red;
+  font-size: 18px;
+}
+
+/* Style for the title/header */
+.title {
+  font-size: 34px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Style for the "Register" button in the login form */
+#loginForm #registerButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #333;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: color 0.3s;
+}
+
+#loginForm #registerButton:hover {
+  color: #555;
+}
+/* Your existing CSS styles here */
+
+/* Style for the book-like container */
+.book {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 70px; /* Add padding from all sides */
+  box-sizing: border-box; /* Include padding in the width/height calculations */
+  margin: 0 auto; /* Center the book container horizontally */
+}
+
+/* Style for the right page containing login, register, and forgot forms */
+.right-page {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; /* Include padding in the width/height calculations */
+  transition: background 0.5s ease-in-out; /* Background transition animation */
+  animation: gradient 10s linear infinite alternate; /* Gradient animation */
+}
+#messageScreen p{
+  text-align:center;
+  border-right: 1px;
+  font-size: 17px;
+}
+
+
+
+@keyframes gradient {
+  0% {
+    background: linear-gradient(
+      45deg,
+      #ff5733,
+      #ffc300
+    ); /* Start gradient color */
+  }
+  100% {
+    background: linear-gradient(
+      45deg,
+      #33ff57,
+      #c300ff
+    ); /* End gradient color */
+  }
+}
+
+/* Add this CSS to your stylesheet */
+.input-field {
+  position: relative;
+  margin-bottom: 15px; /* Add spacing between input fields */
+}
+
+.input-field i {
+  position: absolute;
+  left: 15px; /* Adjust the left position to position the icon */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa; /* Icon color */
+  font-size: 16px; /* Icon size */
+  pointer-events: none; /* Ensure the icon doesn't interfere with input interaction */
+}
+
+/* Style the input background */
+.input-field input[type="text"],
+.input-field input[type="email"],
+.input-field input[type="password"] {
+  background-image: none; /* Reset background image */
+  background-color: #f0f0f0; /* Set background color */
+  border-radius: 25px; /* Add border radius for rounded corners */
+  border: 1px solid #ccc; /* Add border for the input */
+}
+
+/* Style for the left page with scenic background */
+.left-page {
+  flex: 1;
+  background: url(https://png.pngtree.com/thumb_back/fh260/back_pic/03/76/25/9957be8d99793ea.jpg) center/cover;
+  color: #fff;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.left-page h1 {
+  font-size: 40px;
+  margin-top:10%;
+  font-weight:700;
+  letter-spacing:5px;
+  font-family:script;
+  text-align: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none; /* Remove default list-style */
+  padding-left: 0; /* Remove default left padding */
+}
+
+ul li::before {
+  content: "\261e"; /* Unicode character for the pointing finger icon */
+  display: inline-block;
+  font-size: 20px;
+  width: 3em; /* Adjust the width as needed */
+  margin-right: 10px; /* Add spacing between the icon and text */
+}
+/* Style for the tabs container */
+.left-page #tabs {
+  flex:1;
+  justify-content: space-around;
+  margin-top: 20%;
+   display: flex;
+  align-items: center;
+  margin-top: 30px; /* Increase the top margin as needed */
+}
+
+.left-page .tab {
+  cursor: pointer;
+  padding: 5px 8px;
+  background-color: #555;
+  border: 2px solid black;
+  outline-style: outset;
+  outline-color: grey;
+  border-radius: 5px;
+}
+.left-page .tab:hover{
+  background-color: #777; /* Background color on hover */
+  transform: translateY(-2px);
+}
+
+/* Style for the content divs */
+.left-page .content {
+  margin-top: 20px;
+  padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.left-page .content h2{
+  font-size: 30px;
+  margin-top:1%;
+  font-weight:700;
+  color:#000;
+  letter-spacing:1px;
+  font-family:script;
+  text-align: center;
+  align-items: center;
+}
+.left-page .content p,li{
+  font-size: 17px;
+  font-weight:400;
+  color:#000;
+  font-family:script;
+  text-align: justify;
+}
+.left-page .content .strong{
+  margin-top:3%;
+  color:#000;
+}
+/* Hide the content initially */
+.left-page .hidden {
+  display: none;
+}
