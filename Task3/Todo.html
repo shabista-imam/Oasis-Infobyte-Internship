@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+  <nav>
+    <h1>
+     To-Do List Web App
+     </h1>  
+  </nav>
+    <main id="todolist">   
+        <div class="container">
+            <div class="left-column">
+              <form name="newform" @submit.prevent="addItem">
+                <input type="text" name="newitem" id="newitem" v-model="newitem.label" placeholder="Title" required>
+                <textarea type="text" name="newitem" id="detail" v-model="newitem.description"  placeholder="Description"></textarea>
+                <button type="submit">Save</button>
+              </form>
+            </div>
+          <div class="right-column">
+            <div class="section-header">
+              <h4>Title</h4>
+              <h4>Description</h4>
+              <h4>Status</h4>
+            </div>
+
+              <template v-if="todo.length">
+            <transition-group name="todolist" tag="ul">
+                <li v-for="item in todoByStatus" :class="item.done ? 'done' : ''" :key="item.id">
+                    <span class="label">{{ item.label }}</span>
+                    <p class="description">{{ item.description }}</p>
+                    <div class="actions">
+                        <button class="btn-picto" type="button" @click="markAsDoneOrUndone(item)" :aria-label="item.done ? 'Undone' : 'Done'" :title="item.done ? 'Undone' : 'Done'">
+                            <i aria-hidden="true" class="material-icons">{{ item.done ? 'check_box' : 'check_box_outline_blank' }}</i>
+                        </button>
+                        <button class="btn-picto" type="button" @click="deleteItemFromList(item)" aria-label="Delete" title="Delete">
+                            <i aria-hidden="true" class="material-icons">delete</i>
+                        </button>
+                    </div>
+                </li>
+            </transition-group>
+          
+            <togglebutton 
+                label="Move done items at the end?"
+                name="todosort"
+                v-on:clicked="clickontoogle" />
+        </template>
+        <p v-else class="emptylist">Your todo list is empty.</p>
+            </div>
+        </div>
+      
+        <div class="bottom-table">
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="doneTasksTableBody"></tbody>
+    </table>
+</div>
+      <button id="save-button">Save to Excel</button>
+        
+    </main>
+  
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
